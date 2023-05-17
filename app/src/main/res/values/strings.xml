@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Todo List</string>
+
+    <!--Loader-->
+    <string name="loading">Cargando...</string>
+
+    <!--Welcome-->
+    <string name="welcome_title">¡Bienvenido!</string>
+    <string name="welcome_description">Estas por disfrutar la mejor aplicación para organizar tus tareas</string>
+
+    <!--Home-->
+    <string name="home_title">¡Hola!</string>
+    <string name="home_description">Aqui te presentamos tu lista de tareas por categoria</string>
+    <string name="tasks_description">Aqui te presentamos la lista de tareas de la categoria seleccionada</string>
+    <string name="home_add_task">Comienza agregando una tarea :)</string>
+    <string name="home_add_task_category">Agrega una categoria :)</string>
+
+    <!--Add Task-->
+    <string name="add_task_title">Agregar tarea</string>
+    <string name="add_task_title_description">Ingresa los datos necesarios para poder continuar</string>
+    <string name="add_task_title_name">Nombre</string>
+    <string name="add_task_hint_title_name">Nombre de la tarea</string>
+    <string name="add_task_title_description_ti">Descripcion</string>
+    <string name="add_task_hint_title_description">Breve descripcion</string>
+
+    <!--Add Task Category-->
+    <string name="add_task_category_title">Agregar una categoria</string>
+    <string name="add_task_category_title_description">Categorizar tus tareas te ayudara a cumplirlas</string>
+    <string name="add_task_category_title_name">Nombre</string>
+    <string name="add_task_category_hint_title_name">Nombre de la categoria</string>
+
+    <!--Select Task Category-->
+    <string name="select_task_category_title">Selecciona una categoria</string>
+    <string name="select_task_category_title_description">Elige tu categoria favorita</string>
+
+</resources>

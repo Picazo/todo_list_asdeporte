@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="loader_elevation">2dp</dimen>
+    <dimen name="general_margin_bottom">60dp</dimen>
+    <dimen name="general_margin_top">12dp</dimen>
+    <dimen name="general_margin_left">12dp</dimen>
+    <dimen name="stroke_width_card_home">0dp</dimen>
+    <dimen name="elevation_card_home">3dp</dimen>
+
+</resources>

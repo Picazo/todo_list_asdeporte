@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/welcome">
+
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.juliopicazo.todolist.fragment.WelcomeFragment"
+        android:label="welcome_fragment"
+        tools:layout="@layout/fragment_welcome">
+
+        <action
+            android:id="@+id/action_welcomeFragment_to_homeFragment"
+            app:destination="@id/homeTask" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeTask"
+        android:name="com.juliopicazo.todolist.fragment.HomeFragment"
+        android:label="home_task_fragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_detailTaskFragment"
+            app:destination="@id/detailTask" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_tasksFragment"
+            app:destination="@id/tasksFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/tasksFragment"
+        android:label="detail_task_fragment"
+        android:name="com.juliopicazo.todolist.fragment.TasksFragment"
+        tools:layout="@layout/fragment_detail_task">
+
+        <argument
+            android:name="idCategory"
+            app:argType="long"/>
+
+        <action
+            android:id="@+id/action_tasksFragment_to_detailTaskFragment"
+            app:destination="@id/detailTask" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailTask"
+        android:label="detail_task_fragment"
+        android:name="com.juliopicazo.todolist.fragment.DetailTaskFragment"
+        tools:layout="@layout/fragment_detail_task">
+
+        <argument
+            android:name="idCategory"
+            app:argType="long"/>
+
+        <argument
+            android:name="task"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_detailFragment_to_homeFragment"
+            app:destination="@id/homeTask" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.juliopicazo.todolist.fragment.AddTaskFragment"
+        android:label="add_task_fragment"
+        tools:layout="@layout/fragment_create_task">
+
+        <action
+            android:id="@+id/action_addTaskFragment_to_homeFragment"
+            app:destination="@id/homeTask" />
+
+        <action
+            android:id="@+id/action_addTaskFragment_to_selectTaskCategoryFragment"
+            app:destination="@id/selectTaskCategory" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/selectTaskCategory"
+        android:name="com.juliopicazo.todolist.fragment.SelectTaskCategoryFragment"
+        android:label="select_task_category_fragment"
+        tools:layout="@layout/fragment_select_task_category">
+
+        <argument
+            android:name="task"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_selectTaskCategoryFragment_to_homeFragment"
+            app:destination="@id/homeTask" />
+
+        <action
+            android:id="@+id/action_selectTaskCategoryFragment_to_addTaskCategoryFragment"
+            app:destination="@id/addTaskCategory" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTaskCategory"
+        android:name="com.juliopicazo.todolist.fragment.AddTaskCategoryFragment"
+        android:label="add_task_category_fragment"
+        tools:layout="@layout/fragment_create_category_task">
+
+        <argument
+            android:name="task"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_addTaskCategoryFragment_to_homeFragment"
+            app:destination="@id/homeTask" />
+
+        <action
+            android:id="@+id/action_addTaskCategoryFragment_to_selectTaskCategoryFragment"
+            app:destination="@id/selectTaskCategory" />
+
+    </fragment>
+
+
+</navigation>

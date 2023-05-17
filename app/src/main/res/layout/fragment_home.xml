@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_todolist">
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/CustomCardViewStyle"
+            android:id="@+id/cvHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:cardBackgroundColor="@color/green_task"
+            app:cardElevation="@dimen/elevation_card_home"
+            app:strokeWidth="@dimen/stroke_width_card_home">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextTile"
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_title"
+                    android:layout_marginStart="@dimen/general_margin_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/TextBody"
+                    android:id="@+id/tvDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/general_margin_left"
+                    android:text="@string/home_description"
+                    android:textAlignment="textStart"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/ivAsDeporte"/>
+
+                <ImageView
+                    android:id="@+id/ivAsDeporte"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/asdeporte"
+                    android:scaleType="centerInside"
+                    android:layout_margin="@dimen/general_margin_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCategories"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/general_margin_top"
+            app:layout_constraintBottom_toTopOf="@+id/addTask"
+            app:layout_constraintTop_toBottomOf="@id/cvHome"
+            tools:listitem="@layout/item_task"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/TextBody"
+            android:id="@+id/tvAddTask"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/general_margin_left"
+            android:text="@string/home_add_task"
+            android:visibility="gone"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/addTask"
+            app:layout_constraintTop_toBottomOf="@id/cvHome"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            style="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
+            android:id="@+id/addTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            android:layout_marginBottom="@dimen/general_margin_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

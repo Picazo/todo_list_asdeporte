@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="loading_bg">#99000000</color>
+
+    <color name="blue_task">#071C32</color>
+    <color name="orange_task">#C66306</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="green_task">#4E9A33</color>
+
+</resources>

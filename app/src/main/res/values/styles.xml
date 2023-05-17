@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextTile">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/blue_task</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextBody">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/blue_task</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="loader">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:background">@color/loading_bg</item>
+        <item name="android:clickable">true</item>
+        <item name="android:elevation">@dimen/loader_elevation</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="CustomCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay_Card_Custom_Corners</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay_Card_Custom_Corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">12dp</item>
+        <item name="cornerSizeBottomLeft">12dp</item>
+    </style>
+
+</resources>
